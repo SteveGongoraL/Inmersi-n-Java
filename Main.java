@@ -15,6 +15,8 @@ public class Main{
                 """;
         double mediaEvaluacion = (4.5 + 3.8 + 4.0) / 3;
         double mediaEvaluacionPelicula = 0;
+        int vecesEnLasQueSeRepite = 3;
+        int incrementador = 0;
 
         //Imprimir variables.
         System.out.println("Pelicula: " + nombre);
@@ -31,12 +33,21 @@ public class Main{
         }
 
         //Ciclos.
-        for (int i = 0; i < 3; i++) {
+        /* for (int i = 0; i < vecesEnLasQueSeRepite; i++) {
             Scanner teclado = new Scanner(System.in);
             System.out.println("Ingresa la evaluacion que le darias a Interestelar (Del 1 al 5)");
             double notaPelicula = teclado.nextDouble();
             mediaEvaluacionPelicula = mediaEvaluacionPelicula + notaPelicula;
+        } */
+
+        while (incrementador < vecesEnLasQueSeRepite) {
+            Scanner teclado = new Scanner(System.in);
+            System.out.println("Ingresa la evaluacion que le darias a Interestelar (Del 1 al 5)");
+            double notaPelicula = teclado.nextDouble();
+            mediaEvaluacionPelicula = mediaEvaluacionPelicula + notaPelicula;
+            incrementador ++;
         }
-        System.out.println(("La media de la pelicula es: " + mediaEvaluacionPelicula / 3));
+
+        System.out.println(("La media de la pelicula es: " + mediaEvaluacionPelicula / vecesEnLasQueSeRepite));
     }
 }
