@@ -1,53 +1,26 @@
-import java.util.Scanner;
+//import java.util.Scanner;
+
+import modelo.Pelicula;
 
 public class Main{
     public static void main(String[] args) {
-        System.out.println("Hello World");
-        //System.out.println("Pelicula Interestelar");
+        // Guardar una pelicula
+        Pelicula interestelar = new Pelicula();
+        interestelar.setNombre("Interestelar");
+        interestelar.setTiempoDeDuracionEnMinutos(139);
+        interestelar.setFechaDeLanzamiento(2014);
 
-        //Declaración de variables.
-        int fechaDeLanzamiento = 2014;
-        double evaluacion = 4.5;
-        boolean incluidoEnElPlanBasico = true;
-        String nombre = "Interestelar";
-        String sinopsis = """
-            Gracias a un descubrimiento, un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí.
-                """;
-        double mediaEvaluacion = (4.5 + 3.8 + 4.0) / 3;
-        double mediaEvaluacionPelicula = 0;
-        int vecesEnLasQueSeRepite = 3;
-        int incrementador = 0;
+        // Imprimir los valores
+        // System.out.println(interestelar.nombre);
+        interestelar.muestraFichaTecnica();
 
-        //Imprimir variables.
-        System.out.println("Pelicula: " + nombre);
-        System.out.println("Fecha de Lanzamiento: " + fechaDeLanzamiento);
-        System.out.println("Calificacion de la pelicula: " + evaluacion);
-        System.out.println("¿Esta incluida en el plan basico?: " + incluidoEnElPlanBasico);
-        System.out.println("Media de la evalucación de Interestelar: " + mediaEvaluacion);
+        // Guardar otra pelicula
+        Pelicula avengers = new Pelicula();
+        avengers.setNombre("Avengers");
+        avengers.setTiempoDeDuracionEnMinutos(143);
+        avengers.setFechaDeLanzamiento(2012);
 
-        //Condicionales.
-        if (fechaDeLanzamiento >= 2020){
-            System.out.println("Esta pelicula es actual");
-        }else{
-            System.out.println("Esta pelicula es retro pero vale la pena verla");
-        }
-
-        //Ciclos.
-        /* for (int i = 0; i < vecesEnLasQueSeRepite; i++) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa la evaluacion que le darias a Interestelar (Del 1 al 5)");
-            double notaPelicula = teclado.nextDouble();
-            mediaEvaluacionPelicula = mediaEvaluacionPelicula + notaPelicula;
-        } */
-
-        while (incrementador < vecesEnLasQueSeRepite) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa la evaluacion que le darias a Interestelar (Del 1 al 5)");
-            double notaPelicula = teclado.nextDouble();
-            mediaEvaluacionPelicula = mediaEvaluacionPelicula + notaPelicula;
-            incrementador ++;
-        }
-
-        System.out.println(("La media de la pelicula es: " + mediaEvaluacionPelicula / vecesEnLasQueSeRepite));
+        // Llamar metodo
+        avengers.muestraFichaTecnica();
     }
 }
